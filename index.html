@@ -296,15 +296,25 @@
 
         /* Federal Intelligence Section */
         .federal-intelligence {
-            background: linear-gradient(135deg, #2C3E50 0%, #4A5568 100%);
-            color: #FFFFFF;
+            background: #FAFAFA;
+            color: #2C3E50;
             padding: 80px 0;
         }
 
         .federal-intelligence h2 {
-            color: #FFFFFF;
+            color: #2C3E50;
             text-align: center;
             margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .federal-intelligence h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #D97757;
+            margin: 1rem auto 0;
         }
 
         .federal-grid {
@@ -315,14 +325,16 @@
         }
 
         .federal-item {
-            background: rgba(255,255,255,0.1);
+            background: #FFFFFF;
             padding: 2rem;
             border-radius: 10px;
             border-left: 4px solid #D97757;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #E8E8E8;
         }
 
         .federal-item h3 {
-            color: #FFFFFF;
+            color: #2C3E50;
             margin-bottom: 1rem;
         }
 
@@ -335,6 +347,7 @@
             margin-bottom: 0.5rem;
             padding-left: 1rem;
             position: relative;
+            color: #4A5568;
         }
 
         .federal-item li:before {
@@ -348,10 +361,13 @@
             text-align: center;
             font-size: 1.2rem;
             font-weight: 500;
-            background: rgba(255,255,255,0.1);
+            background: #FFFFFF;
+            color: #2C3E50;
             padding: 2rem;
             border-radius: 10px;
             margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #E8E8E8;
         }
 
         /* What Makes Me Different Section */
