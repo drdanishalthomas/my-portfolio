@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Danisha L. Thomas - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background-color: #FFFFFF;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #2C3E50;
+            color: #FFFFFF;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFFFFF;
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2C3E50 0%, #4A5568 100%);
+            color: #FFFFFF;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #D97757;
+            color: #FFFFFF;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #C5704D;
+        }
+
+        /* About Me Section */
+        .about {
+            padding: 80px 0;
+            background: #FAFAFA;
+        }
+
+        .about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2C3E50;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            color: #2C3E50;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #D97757;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 80px 0;
+            background: #FFFFFF;
+        }
+
+        .skills h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2C3E50;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 1px solid #E8E8E8;
+        }
+
+        .skill-category h3 {
+            color: #2C3E50;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .skill-item {
+            background: #FAFAFA;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-weight: 500;
+            color: #4A5568;
+            border: 1px solid #E8E8E8;
+        }
+
+        .skill-item.advanced {
+            background: #FAFAFA;
+            color: #2C3E50;
+        }
+
+        .skill-item.intermediate {
+            background: #FAFAFA;
+            color: #2C3E50;
+        }
+
+        .skill-item.beginner {
+            background: #FAFAFA;
+            color: #2C3E50;
+        }
+
+        /* Projects Section - NEW! */
+        .projects {
+            padding: 80px 0;
+            background: #FAFAFA;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2C3E50;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #E8E8E8;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #2C3E50;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-content h3 {
+            color: #2C3E50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-content p {
+            color: #4A5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: #E8F4F8;
+            color: #2C3E50;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: #D97757;
+            color: #FFFFFF;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            background: #C5704D;
+        }
+
+        /* Footer */
+        footer {
+            background: #2C3E50;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Education Timeline */
+        .education-timeline, .experience-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .education-item, .experience-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #E8E8E8;
+        }
+
+        .education-year, .experience-period {
+            background: #D97757;
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            height: fit-content;
+        }
+
+        .education-content h3, .experience-content h3 {
+            color: #2C3E50;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-content h4, .experience-content h4 {
+            color: #5A6C7D;
+            margin-bottom: 0.5rem;
+            font-weight: normal;
+        }
+
+        .experience-content ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .experience-content li {
+            margin-bottom: 0.5rem;
+            color: #4A5568;
+        }
+
+        .education-content p {
+            color: #4A5568;
+        }
+
+        .experience-content ul {
+            color: #4A5568;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #E8E8E8;
+        }
+
+        .contact-item h3 {
+            color: #2C3E50;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            color: #4A5568;
+        }
+
+        /* Federal Intelligence Section */
+        .federal-intelligence {
+            background: #FAFAFA;
+            color: #2C3E50;
+            padding: 80px 0;
+        }
+
+        .federal-intelligence h2 {
+            color: #2C3E50;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .federal-intelligence h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #D97757;
+            margin: 1rem auto 0;
+        }
+
+        .federal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .federal-item {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #D97757;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #E8E8E8;
+        }
+
+        .federal-item h3 {
+            color: #2C3E50;
+            margin-bottom: 1rem;
+        }
+
+        .federal-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .federal-item li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+            color: #4A5568;
+        }
+
+        .federal-item li:before {
+            content: "•";
+            color: #D97757;
+            position: absolute;
+            left: 0;
+        }
+
+        .agency-list {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: #FFFFFF;
+            color: #2C3E50;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #E8E8E8;
+        }
+
+        /* What Makes Me Different Section */
+        .different {
+            background: #FAFAFA;
+            padding: 80px 0;
+        }
+
+        .different h2 {
+            text-align: center;
+            color: #2C3E50;
+            margin-bottom: 3rem;
+        }
+
+        .different-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .different-content p {
+            color: #2C3E50;
+        }
+
+        .different-highlight {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #D97757;
+            margin: 2rem 0;
+            border: 1px solid #E8E8E8;
+        }
+
+        .different-highlight h3 {
+            color: #2C3E50;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul li {
+                margin-left: 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-item, .experience-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Dr. Danisha L. Thomas</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#federal">Federal</a></li>
+                        <li><a href="#different">Expertise</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Data Scientist | Behavioral Intelligence Specialist | Forensic & Clinical Psychology Expert</p>
+            <p style="font-size: 1.2rem; margin-top: 1rem; font-weight: 500;">PhD Clinical Psychology | Security Clearance Eligible</p>
+            <p style="font-size: 1.1rem; margin-top: 1rem;">Specialized in Threat Assessment, Predictive Analytics & Federal Research</p>
+            <a href="#about" class="btn">Learn More About Me</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Placeholder for your photo -->
+                    <div style="width: 250px; height: 250px; background: #E8E8E8; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #5A6C7D; font-size: 1.2rem; border: 5px solid #D97757;">
+                        Your Photo Here
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        I'm a data scientist at the intersection of behavioral intelligence, forensic analysis, and advanced analytics. With a PhD in Clinical Psychology and extensive experience in high-stakes healthcare and forensic settings, I bring a rare combination of skills to data-driven problem solving: the clinical expertise to understand human behavior patterns, the technical capabilities to build predictive models, and the research rigor to generate actionable intelligence.
+                    </p>
+                    <p>
+                        My career spans crisis intervention, forensic assessments for criminal courts, federal emergency management, and data science—giving me a unique lens on how behavioral analysis, statistical modeling, and investigative methodologies converge to solve complex problems in public safety, national security, and public health.
+                    </p>
+                    <p>
+                        I've assessed patients in crisis, conducted 70+ forensic competency assessments, led multi-agency emergency response operations, and analyzed datasets of 500+ cases to identify risk patterns. Now I'm applying that same intuition, rigor, and technical skill to data science—building models that don't just process numbers, but predict human behavior, identify threats, and generate insights that protect communities and inform critical decisions.
+                    </p>
+                    <p>
+                        Whether developing threat assessment protocols, analyzing behavioral data for risk prediction, or building statistical models for public health interventions, I bridge the gap between understanding people and leveraging technology to serve the mission.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Core Competencies</h2>
+                <div class="skills-grid">
+                    <!-- Data Science & Predictive Analytics -->
+                    <div class="skill-category">
+                        <h3>Data Science & Predictive Analytics</h3>
+                        <div class="skill-item advanced">Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)</div>
+                        <div class="skill-item advanced">Statistical modeling and machine learning</div>
+                        <div class="skill-item advanced">Predictive analytics and risk modeling</div>
+                        <div class="skill-item advanced">Database mining and pattern recognition</div>
+                        <div class="skill-item intermediate">Data visualization and intelligence reporting</div>
+                    </div>
+
+                    <!-- Behavioral Intelligence & Threat Assessment -->
+                    <div class="skill-category">
+                        <h3>Behavioral Intelligence & Threat Assessment</h3>
+                        <div class="skill-item advanced">Behavioral pattern analysis and profiling</div>
+                        <div class="skill-item advanced">Threat detection and risk evaluation</div>
+                        <div class="skill-item advanced">Predictive modeling for intervention strategies</div>
+                        <div class="skill-item intermediate">Surveillance data analysis and trend identification</div>
+                        <div class="skill-item intermediate">Social media risk assessment and monitoring</div>
+                    </div>
+
+                    <!-- Forensic & Investigative Analysis -->
+                    <div class="skill-category">
+                        <h3>Forensic & Investigative Analysis</h3>
+                        <div class="skill-item advanced">70+ forensic psychological assessments for criminal courts</div>
+                        <div class="skill-item advanced">Competency examinations and fitness-for-duty assessments</div>
+                        <div class="skill-item advanced">Criminal justice system collaboration</div>
+                        <div class="skill-item intermediate">Evidence-based risk assessment protocols</div>
+                        <div class="skill-item intermediate">Investigative methodology and case analysis</div>
+                    </div>
+
+                    <!-- Research & Statistical Methodology -->
+                    <div class="skill-category">
+                        <h3>Research & Statistical Methodology</h3>
+                        <div class="skill-item advanced">Experimental design and hypothesis testing</div>
+                        <div class="skill-item advanced">Advanced statistical analysis and modeling</div>
+                        <div class="skill-item advanced">Research project management and grant methodology</div>
+                        <div class="skill-item intermediate">Academic research supervision and consultation</div>
+                        <div class="skill-item intermediate">Evidence-based analysis and data validation</div>
+                    </div>
+
+                    <!-- Crisis Management & Federal Operations -->
+                    <div class="skill-category">
+                        <h3>Crisis Management & Federal Operations</h3>
+                        <div class="skill-item advanced">Federal emergency response and incident command (ICS-100, 200, 700, 800)</div>
+                        <div class="skill-item advanced">Multi-agency coordination and inter-agency collaboration</div>
+                        <div class="skill-item advanced">Crisis intervention and high-stakes decision making</div>
+                        <div class="skill-item intermediate">Emergency operations center management</div>
+                        <div class="skill-item intermediate">Risk mitigation and security protocol development</div>
+                    </div>
+
+                    <!-- Healthcare & Public Health Intelligence -->
+                    <div class="skill-category">
+                        <h3>Healthcare & Public Health Intelligence</h3>
+                        <div class="skill-item advanced">Clinical assessment in high-acuity settings</div>
+                        <div class="skill-item advanced">Public health data analysis and outcome modeling</div>
+                        <div class="skill-item advanced">Mental health risk screening and intervention strategies</div>
+                        <div class="skill-item intermediate">Cultural competency with diverse and vulnerable populations</div>
+                        <div class="skill-item intermediate">Healthcare regulatory compliance and policy development</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section - NEW! -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Megaline SDA Project -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Megaline Plans - Statistical Data Analysis</h3>
+                            <p>Statistical hypothesis testing to evaluate cellular plan revenue using Python, pandas, and scipy. Implemented Welch's t-tests and confidence intervals to identify significant revenue differences between plan types.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">SciPy</span>
+                                <span class="tech-tag">Hypothesis Testing</span>
+                                <span class="tech-tag">Statistical Analysis</span>
+                            </div>
+                            <a href="https://github.com/drdanishalthomas/megaline-sda-project" target="_blank" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Video Game Sales Forecasting Project -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Video Game Sales Forecasting</h3>
+                            <p>Predictive modeling using regression analysis to forecast video game sales and identify success factors. Analyzed 16,000+ games across platforms and genres to build actionable forecasting models.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Regression Analysis</span>
+                                <span class="tech-tag">Predictive Modeling</span>
+                                <span class="tech-tag">Data Visualization</span>
+                            </div>
+                            <a href="https://github.com/drdanishalthomas/video-game-sales-forecasting" target="_blank" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Federal & Intelligence Expertise Section -->
+        <section id="federal" class="federal-intelligence">
+            <div class="container">
+                <h2>Federal & Intelligence Expertise</h2>
+                <div class="agency-list">
+                    <strong>Target Agencies & Sectors:</strong><br>
+                    FBI | CIA | NSA | Department of Homeland Security | Department of Defense | National Institutes of Health | CDC | Department of Justice | Veterans Affairs | Defense Contractors | Big Tech Trust & Safety
+                </div>
+                <div class="federal-grid">
+                    <div class="federal-item">
+                        <h3>Intelligence & Counterterrorism</h3>
+                        <ul>
+                            <li>Behavioral analysis</li>
+                            <li>Threat assessment</li>
+                            <li>Predictive modeling for national security</li>
+                        </ul>
+                    </div>
+                    <div class="federal-item">
+                        <h3>Federal Research & Analytics</h3>
+                        <ul>
+                            <li>Statistical modeling</li>
+                            <li>Research design</li>
+                            <li>Grant methodology</li>
+                            <li>Data validation</li>
+                        </ul>
+                    </div>
+                    <div class="federal-item">
+                        <h3>Defense & Corporate Security</h3>
+                        <ul>
+                            <li>Risk evaluation</li>
+                            <li>Threat detection</li>
+                            <li>Behavioral intelligence analysis</li>
+                        </ul>
+                    </div>
+                    <div class="federal-item">
+                        <h3>Forensic & Clinical Intelligence</h3>
+                        <ul>
+                            <li>Psychological assessment</li>
+                            <li>Competency evaluation</li>
+                            <li>Fitness-for-duty analysis</li>
+                        </ul>
+                    </div>
+                    <div class="federal-item">
+                        <h3>Public Health & Safety</h3>
+                        <ul>
+                            <li>Crisis management</li>
+                            <li>Intervention modeling</li>
+                            <li>Population health analytics</li>
+                        </ul>
+                    </div>
+                    <div class="federal-item">
+                        <h3>Certifications & Clearances</h3>
+                        <ul>
+                            <li>FEMA ICS-100, 200, 700, 800 (Incident Command System)</li>
+                            <li>Crisis Prevention Institute (CPI) Certified</li>
+                            <li>Security Clearance Eligible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Makes Me Different Section -->
+        <section id="different" class="different">
+            <div class="container">
+                <h2>What Makes Me Different</h2>
+                <div class="different-content">
+                    <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem; font-style: italic;">
+                        Most data scientists understand algorithms. Most behavioral specialists understand people. I understand both—and how they work together to predict threats, assess risks, and protect lives.
+                    </p>
+                    
+                    <p>
+                        I've made split-second decisions with incomplete information in crisis situations. I've assessed defendants for criminal court and written reports that inform judicial decisions. I've coordinated federal emergency responses across multiple agencies. And I've analyzed behavioral data to build models that predict risk and inform intervention strategies.
+                    </p>
+
+                    <div class="different-highlight">
+                        <h3>My clinical and forensic background means I can:</h3>
+                        <ul>
+                            <li>Work with sensitive data ethically and securely</li>
+                            <li>Recognize behavioral patterns and anomalies that others miss</li>
+                            <li>Translate complex technical findings for non-technical stakeholders and decision-makers</li>
+                            <li>Operate effectively in high-pressure, high-stakes environments where accuracy matters</li>
+                            <li>Bridge the gap between human behavior analysis and data-driven intelligence solutions</li>
+                        </ul>
+                    </div>
+
+                    <p style="font-size: 1.1rem; font-weight: 500; text-align: center; margin-top: 2rem;">
+                        I don't just analyze data. I understand the human context behind it—and I know how to turn that understanding into predictive models, threat assessments, and actionable intelligence that protects organizations, communities, and national interests.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="about">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-year">In Progress</div>
+                        <div class="education-content">
+                            <h3>Data Science Professional Certificate</h3>
+                            <h4>TripleTen</h4>
+                            <p>Advanced training in Python, machine learning, statistical modeling, and data visualization</p>
+                            <p><em>Expected Completion: [Add your expected completion date here]</em></p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-year">2019</div>
+                        <div class="education-content">
+                            <h3>Master of Science in Nursing</h3>
+                            <h4>Leadership in Health Systems Management</h4>
+                            <p>Drexel University, Philadelphia, PA</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-year">2017</div>
+                        <div class="education-content">
+                            <h3>Doctor of Philosophy</h3>
+                            <h4>Clinical Psychology</h4>
+                            <p>Walden University, Minneapolis, MN</p>
+                            <p><em>Dissertation: Recidivism: An Analysis of Race, Locus of Control, and Resilience</em></p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-year">2008</div>
+                        <div class="education-content">
+                            <h3>Master of Science</h3>
+                            <h4>Psychology - Crisis Management and Response</h4>
+                            <p>Walden University, Minneapolis, MN</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-year">2003</div>
+                        <div class="education-content">
+                            <h3>Bachelor of Science in Nursing</h3>
+                            <p>Texas Woman's University, Denton, TX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="skills">
+            <div class="container">
+                <h2>Professional Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="experience-period">2022 - Current</div>
+                        <div class="experience-content">
+                            <h3>Research Methodologist & Academic Consultant</h3>
+                            <h4>Self Employed, Euless, TX</h4>
+                            <ul>
+                                <li>Guide graduate students and professionals through complex research design, statistical analysis, and methodology</li>
+                                <li>Develop and validate research instruments, surveys, and data collection protocols</li>
+                                <li>Conduct advanced statistical analyses including regression modeling, hypothesis testing, and predictive analytics</li>
+                                <li>Provide expertise in experimental design, data interpretation, and research ethics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-period">2016 - 2017</div>
+                        <div class="experience-content">
+                            <h3>Clinical Psychology Intern - Forensic Specialist</h3>
+                            <h4>Karten Psychological Services, Fort Worth, TX</h4>
+                            <ul>
+                                <li>Conducted 70+ Mental Status Exams, clinical interviews, and forensic capacity evaluations</li>
+                                <li>Prepared 50+ written forensic reports for criminal courts determining competency to stand trial</li>
+                                <li>Analyzed court documents, police reports, medical records, and criminal histories for forensic cases</li>
+                                <li>Performed psychological testing for law enforcement fitness-for-duty evaluations</li>
+                                <li>Conducted competency examinations for criminal defendants per court orders</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-period">2019</div>
+                        <div class="experience-content">
+                            <h3>Executive Intern - Data Analysis & Risk Assessment</h3>
+                            <h4>MHMR Tarrant County, Fort Worth, TX</h4>
+                            <ul>
+                                <li>Analyzed 500+ database records using statistical methods to identify high-risk population trends</li>
+                                <li>Developed Care Coordination Risk Assessment Tool (CCAT) using predictive modeling</li>
+                                <li>Created statistical algorithms to identify top 5% at-risk populations with co-occurring diagnoses</li>
+                                <li>Collaborated with executive team to develop evidence-based policies and procedures</li>
+                                <li>Generated outcome data points and performance metrics for quality improvement initiatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-period">2019</div>
+                        <div class="experience-content">
+                            <h3>Executive Intern - Crisis Assessment & Screening Tool Development</h3>
+                            <h4>Grand Prairie Independent School District, TX</h4>
+                            <ul>
+                                <li>Developed suicide risk assessment protocols and statistical models for threat evaluation</li>
+                                <li>Created data-driven screening tools to identify at-risk students using behavioral indicators</li>
+                                <li>Analyzed workflow efficiency for 60+ counseling staff using performance metrics</li>
+                                <li>Implemented continuous improvement strategies based on statistical analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-period">2006 - 2013</div>
+                        <div class="experience-content">
+                            <h3>Operations Supervisor & Data Analyst</h3>
+                            <h4>Kindred Hospital ICU, Fort Worth, TX</h4>
+                            <ul>
+                                <li>Managed 90-bed critical care facility using data-driven decision making and statistical analysis</li>
+                                <li>Conducted 75+ risk assessments and postmortem audits to identify systemic vulnerabilities</li>
+                                <li>Led crisis response teams and emergency protocols following federal incident command structure</li>
+                                <li>Supervised 50+ personnel across multiple departments using performance-based metrics</li>
+                                <li>Developed QA/QI programs using statistical process control and outcome measurement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="about">
+            <div class="container">
+                <h2>Professional Focus & Contact</h2>
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h3 style="color: #2C3E50; margin-bottom: 1rem;">Open to opportunities in:</h3>
+                    <p style="font-size: 1.2rem; font-weight: 500; color: #2C3E50;">
+                        Behavioral Intelligence | Threat Assessment & Analysis | Federal Research | Forensic Data Science | Predictive Analytics | Crisis Management | Public Health Intelligence | Defense & Security Analytics
+                    </p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p>Euless, TX 76039</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p>Available upon request</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>Available upon request</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🔒 Security Clearance</h3>
+                        <p>Eligible</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🎯 Current Focus</h3>
+                        <p>Leveraging data science and machine learning to build predictive models for behavioral risk assessment, threat detection, and intervention strategy optimization</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🤝 Let's Connect</h3>
+                        <p>Looking for someone who brings both technical expertise and behavioral insight to solve complex problems in national security, public safety, corporate security, or public health</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dr. Danisha L. Thomas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to navigation items on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
